@@ -30,6 +30,10 @@ Tipo de atendimento: {TIPOS_ATENDIMENTO[tipo_atendimento][0]}
 Tipo de convênio: {TIPOS_CONVENIO[tipo_convenio][0]}
 
 Valor total do atendimento: R${valor_atendimento:.2f}''')
+if idade_cliente >= 65:
+    print('Classificação: Preferencial')
+else:
+    print('Classificação: Padrão')
 if tipo_convenio == '5':
     print('Sem desconto de convênio.')
 else:    
@@ -43,4 +47,4 @@ Desconto por idade: R${valor_descontado_idade:.2f} ({porc_idade * 100:.0f}%)
 else:
     print('Sem desconto por idade.')
 
-print(f'Total a pagar: R${valor_final}')
+print(f'Total a pagar: R${valor_final:.2f}')
